@@ -3,5 +3,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="min-h-screen p-8 bg-neutral-900">{children}</div>;
+  return <div className="min-h-screen p-8">{children}</div>;
 }
