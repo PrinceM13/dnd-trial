@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="w-full min-h-screen flex flex-col gap-12 items-center justify-center">
-      <h1>Drag & Drop Trial</h1>
+      <h1 className="text-neutral-200">Drag & Drop Trial</h1>
 
       <section>
         <LinkButton path="kanban-board">Kanban Board</LinkButton>
