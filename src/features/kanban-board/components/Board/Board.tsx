@@ -1,10 +1,8 @@
 "use client";
 
 import { DndContext } from "@dnd-kit/core";
-
 import Column from "@/features/kanban-board/components/Column";
 import { COLUMNS } from "@/features/kanban-board/constants";
-
 import useBoard from "./Board.hook";
 
 export const KanbanBoard: React.FC = () => {
