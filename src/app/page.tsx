@@ -7,8 +7,9 @@ export default function Home() {
     <main className="w-full min-h-screen flex flex-col gap-12 items-center justify-center">
       <h1 className="text-neutral-200">Drag & Drop Trial</h1>
 
-      <section>
+      <section className="flex flex-col gap-6">
         <LinkButton path="kanban-board">Kanban Board</LinkButton>
+        <LinkButton path="sortable-list">Sortable List</LinkButton>
       </section>
     </main>
   );

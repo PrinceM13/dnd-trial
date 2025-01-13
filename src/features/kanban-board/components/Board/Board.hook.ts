@@ -1,6 +1,7 @@
+"use client";
+
 import { useState } from "react";
 import { DragEndEvent } from "@dnd-kit/core";
-
 import { INITIAL_TASKS } from "@/features/kanban-board/constants";
 import type { Task } from "@/features/kanban-board/components/types";
 import { useClientReady } from "@/hooks";
