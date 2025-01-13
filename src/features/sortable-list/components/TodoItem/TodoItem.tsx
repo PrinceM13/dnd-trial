@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, MoveVertical } from "lucide-react";
 import { CSS } from "@dnd-kit/utilities";
 import { useSortable } from "@dnd-kit/sortable";
@@ -14,6 +14,12 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
   });
 
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isDragging && isOpen) {
+      setIsOpen(false);
+    }
+  }, [isDragging, isOpen]);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -37,7 +43,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
 
         <div
           className={cn(
-            "overflow-hidden transition-all duration-1000",
+            "overflow-hidden transition-all duration-500",
             isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           )}
         >
