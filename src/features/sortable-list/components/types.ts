@@ -4,10 +4,6 @@ export type Todo = {
   description: string;
 };
 
-export type TodoListProps = {
-  todos: Todo[];
-};
-
 export type TodoItemProps = {
   todo: Todo;
 };
